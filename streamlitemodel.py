@@ -4,6 +4,7 @@ import keras
 import numpy as np
 import my_test
 import subprocess
+import gdown
 
 def install_system_packages():
     subprocess.call(['apt-get', 'update', '-y'])
@@ -12,7 +13,12 @@ def install_system_packages():
 
 @st.cache(allow_output_mutation=True)
 def my_model():
-    model = keras.models.load_model("C:/Users/Meir/Downloads/model_finalyolo77-20230313T214546Z-001/model_finalyolo77")
+    #model = keras.models.load_model("C:/Users/Meir/Downloads/model_finalyolo77-20230313T214546Z-001/model_finalyolo77")
+    
+    url = "https://drive.google.com/drive/folders/1HdUDouvaCLfU8PcLoEfW_IbG8Qs5lEl0?usp=share_link"
+    output = "model_finalyolo77" # Name of the output file
+    gdown.download(url, output, quiet=False)
+    model = keras.models.load_model(model_finalyolo77)
     return model
 
 def main2():
