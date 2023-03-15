@@ -1,7 +1,7 @@
 streamlit==0.74.1
 pyvirtualdisplay==2.2
 opencv-python
-opencv-python-headless==4.5.3.56
+opencv-python-headless==4.5.2.54
 keras
 numpy
 matplotlib
