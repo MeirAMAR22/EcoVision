@@ -3,6 +3,11 @@ import cv2
 import keras
 import numpy as np
 import my_test
+import subprocess
+
+def install_system_packages():
+    subprocess.call(['apt-get', 'update', '-y'])
+    subprocess.call(['apt-get', 'install', '-y', '--no-install-recommends', '-q', '-o', 'Dpkg::Options::=--force-confdef', '-o', 'Dpkg::Options::=--force-confold', '-o', 'APT::Install-Suggests=0', '-o', 'APT::Install-Recommends=0', '-o', 'Debug::pkgProblemResolver=1', '-o', 'Debug::Acquire::http=true', '-o', 'Debug::pkgDPkgPM=1', '-o', 'Debug::pkgProblemResolver=1', '-o', 'Debug::pkgAcquire::http=true', '-o', 'Debug::pkgAcquire::Worker=1', '-o', 'Debug::pkgDPkgPM=1'] + open('packages.txt').read().split())
 
 
 @st.cache(allow_output_mutation=True)
@@ -11,7 +16,7 @@ def my_model():
     return model
 
 def main2():
-
+    install_system_packages()
     model = my_model()
     # Define the page title
     iii = cv2.imread("C:/Users/Meir/Downloads/ISRAELGARB.jpg")
