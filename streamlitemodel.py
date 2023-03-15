@@ -18,7 +18,7 @@ def my_model():
     url = "https://drive.google.com/drive/folders/1HdUDouvaCLfU8PcLoEfW_IbG8Qs5lEl0?usp=share_link"
     output = "model_finalyolo77" # Name of the output file
     gdown.download(url, output, quiet=False)
-    model = keras.models.load_model(model_finalyolo77)
+    model = keras.models.load_model(output)
     return model
 
 def main2():
