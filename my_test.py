@@ -5,7 +5,7 @@ import keras
 import numpy as np
 from PIL import Image
 import io
-cv2.gapi.wip.GStreamerPipeline = cv2.gapi_wip_gst_GStreamerPipeline
+#cv2.gapi.wip.GStreamerPipeline = cv2.gapi_wip_gst_GStreamerPipeline
 
 
 def output_coordinates_to_box_coordinates(cx, cy, w, h, img_h, img_w):
