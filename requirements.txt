@@ -4,5 +4,5 @@ opencv-python-headless
 keras
 numpy
 matplotlib
-tensorflow==2.6.0
+tensorflow==2.11.0
 mesa
