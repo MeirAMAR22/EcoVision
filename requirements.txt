@@ -6,4 +6,3 @@ keras
 numpy
 matplotlib
 tensorflow==2.6.0
-libgl1-mesa-glx
